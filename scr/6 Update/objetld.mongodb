@@ -1,11 +1,13 @@
 use("espoch_store")
 db.products.updateOne(
     //query
-    {_id:4},
+    {_id:2},
     //change
     {
         $inc:{
-            price:100,
+            name: 'galleta'
         }
     }
 )
+
+

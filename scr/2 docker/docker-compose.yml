@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mongodb1:
+    image: mongo:5.0
+    container_name: mongodb_container1
+    restart: always
+    ports:
+      - 27200:27017
+    networks:
+      - backend
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: angi
+      MONGO_INITDB_ROOT_PASSWORD: angi3323
+  mongodb2:
+    image: mongo:5.0
+    container_name: mongodb_container2
+    restart: always
+    ports:
+      - 27300:27017
+    networks:
+      - backend
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: angi
+      MONGO_INITDB_ROOT_PASSWORD: angi3323
+    volumes:
+      - ./mongodb_data:/data/db
+
+networks:
+  backend:
+    external:
+      name: proxy
+
