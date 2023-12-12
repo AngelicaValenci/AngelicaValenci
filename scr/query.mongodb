@@ -1,4 +1,0 @@
-use("sample_training")
-//conteo de paises hola 
-
-db.zips.find({ state: "NY" }).count()

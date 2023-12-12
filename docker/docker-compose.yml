@@ -1,4 +1,4 @@
-version: '3.8'
+Version: '3.8'
 
 services:
   nginx-proxy:
@@ -32,8 +32,6 @@ networks:
   default:
     external:
       name: proxy
-
-
 
 
 
